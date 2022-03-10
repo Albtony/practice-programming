@@ -55,14 +55,14 @@ int main() {
  2^0 + 2^3 -> 9 (4 th)
  ...
 
- atau biar lebih gampang dilihat, m sama n ditukar dan ditampilkan sendiri
+ biar lebih gampang dilihat, m sama n ditukar dan ditampilkan sendiri
  1 0 -> 1 st
  2 0 -> 2 nd
- 2 1 -> 3 rd		
- 3 0 -> 4 th			
- 3 1 -> 5 th			
- 3 2 -> ...
- 4 0
+ 2 1 -> 3 rd
+ 3 0 -> 4 th
+ 3 1 -> 5 th
+ 3 2 -> 6 th 
+ 4 0 -> ...
  4 1
  4 2
  4 3
@@ -73,7 +73,7 @@ int main() {
  besar = 2, perulangan = 2
  besar = n, perulangan = n
 
- jadi untuk nyari kth
+ jadi untuk nyari pangkat kth
  while k > 0, k = k - n, n++
 
  ketika k =< 0, besar = n
@@ -81,7 +81,7 @@ int main() {
  untuk nyari kecil, bisa dilihat dari nilai k setelah keluar dari while loop
  if (k == 0) kecil = n - 1
  if (k < 0) {
-	k = k + n -> dibalikin 1 iterasi sebelum keluar while loop
+	k = k + n -> nilai k dibalikin 1 iterasi sebelum keluar while loop
 	kecil = k - 1
  }
 
