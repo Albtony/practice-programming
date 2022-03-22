@@ -1,5 +1,6 @@
 // LDCSUMAB - BRVT - Math Team Collection 2013
-// source : https://www.spoj.com/problems/LDCSUMAB/
+// source 	: https://www.spoj.com/problems/LDCSUMAB/
+// sub 		: https://www.spoj.com/status/albtony21/
 
 /**
  * Consider the sequence of all integers that can be represented as 2^m + 2^n for integers 0 <= m < n, in increasing order. Given a positive 
