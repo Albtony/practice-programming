@@ -51,8 +51,6 @@ int main() {
         sort(x, x+n);
         sort(y, y+n);
 
-        // cout << y[0] << y[n-1] << x[0] << x[n-1] << '\n';
-
         ll dist, ymax, ymin, xmax, xmin;
         if(y[0] * y[n-1] > 0) {
             ymax = max(abs(y[0]), abs(y[n-1]));
