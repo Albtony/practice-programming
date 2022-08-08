@@ -53,11 +53,7 @@ int main() {
 
     while(m--) {
         ll s, t;
-        
         cin >> s >> t;
-
-        // cout << l[0] << l[s] << l[t] << '\n';
-
         if(s < t) cout << l[t-1] - l[s-1] << '\n';
         else cout << r[s-1] - r[t-1] << '\n';
     }   
