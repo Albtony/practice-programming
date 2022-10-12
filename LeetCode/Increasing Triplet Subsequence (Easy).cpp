@@ -1,3 +1,30 @@
+/*
+Source: https://leetcode.com/problems/increasing-triplet-subsequence/
+Title: Longest Common Prefix
+Diff: Easy
+
+Instruction
+Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j < k and 
+nums[i] < nums[j] < nums[k]. If no such indices exists, return false.
+
+Example
+Input: nums = [1,2,3,4,5]
+Output: true
+Explanation: Any triplet where i < j < k is valid.
+
+Input: nums = [5,4,3,2,1]
+Output: false
+Explanation: No triplet exists.
+
+Input: nums = [2,1,5,0,4,6]
+Output: true
+Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 < nums[5] == 6.
+
+Constraints
+1 <= nums.length <= 5 * 105
+-231 <= nums[i] <= 231 - 1
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -46,8 +73,8 @@ int main() {
 // Reference : https://leetcode.com/problems/increasing-triplet-subsequence/discuss/2688292/C%2B%2B-EASY-AND-SIMPLE-O(N)-TIME-AND-O(1)-SPACE
 /*
     // i used dynamic programming of longest increasing subsequence
-    // but that is too complex for the current problem (O(n^2))
-    // we can solve this problem more efficient with more clever tactics
+    // but that is too complex for the current problem (O(n^2)) because its too general
+    // we can solve this problem more efficient (O(n)) with more clever tactics
     bool increasingTriplet(vector<int>& nums) {
         int size = nums.size();
         // dp data
