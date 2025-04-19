@@ -110,3 +110,9 @@ int main () {
 
     return 0;
 }
+
+/*
+Since the lists are sorted, you can combine the two iteratively while minding which value is smaller
+The easiest way of doing this is to create a new list, then examine the values, and adding the smallest to the new list
+since it is sorted ascendingly, if one list terminates faster, then add the remaining list, since it's already sorted
+*/
