@@ -1,3 +1,27 @@
+/*
+Source: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+Title: Find the Index of the First Occurrence in a String
+Diff: Easy
+
+Instruction
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, 
+or -1 if needle is not part of haystack.
+
+Examples
+Input: haystack = "sadbutsad", needle = "sad"
+Output: 0
+Explanation: "sad" occurs at index 0 and 6.
+The first occurrence is at index 0, so we return 0.
+
+Input: haystack = "leetcode", needle = "leeto"
+Output: -1
+Explanation: "leeto" did not occur in "leetcode", so we return -1.
+
+Constraints
+1 <= haystack.length, needle.length <= 104
+haystack and needle consist of only lowercase English characters.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -26,8 +50,7 @@ class Solution {
                 return -1;
             }
         }
-
-        // O(n) time, O(n) space, knuth-morris-pratt algorithm
+    // O(n) time, O(n) space, knuth-morris-pratt algorithm
         int betterStrStr(string haystack, string needle) {
             int n = haystack.size();
             int m = needle.size();
@@ -82,10 +105,28 @@ class Solution {
             }
             return lps;
         }
+    
 };
 
 int main () {
     Solution solution;
+
+    string haystack1 = "sadbutsad";
+    string needle1 = "sad";
+    assert(solution.betterStrStr(haystack1, needle1) == 0);
+
+    string haystack2 = "leetcode";
+    string needle2 = "leeto";
+    assert(solution.betterStrStr(haystack2, needle2) == -1);
+
+    string haystack3 = "hey";
+    string needle3 = "";
+    assert(solution.betterStrStr(haystack3, needle3) == 0);
+
+    string haystack4 = "ababaabbbbababbababbabaabbabaab";
+    string needle4 = "abbabbb";
+    assert(solution.betterStrStr(haystack4, needle4) == -1);
+    cout << "solution has passed all of the defined testcases";
 
     return 0;
 }
