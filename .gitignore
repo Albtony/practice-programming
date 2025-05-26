@@ -1,2 +1,5 @@
 *.exe
 tempCodeRunnerFile.*
+.vscode
+**/Java/*
+!**/Java/**/*.java
