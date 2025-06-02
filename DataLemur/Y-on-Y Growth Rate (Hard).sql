@@ -1,6 +1,6 @@
 /*
 Source: https://datalemur.com/questions/yoy-growth-rate
-Diff: Medium
+Diff: Hard
 
 Assume you're given a table containing information about Wayfair user transactions for different products. Write a query to 
 calculate the year-on-year growth rate for the total spend of each product, grouping the results by product ID.
