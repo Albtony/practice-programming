@@ -59,6 +59,12 @@ class Solution {
             }
             return count;
         }
+
+        int removeDuplicatesStl(vector<int>& nums) {
+            auto iter = unique(nums.begin(), nums.end());
+            nums.erase(iter, nums.end());
+            return nums.size();
+        }
 };
 
 int main() {
@@ -67,7 +73,7 @@ int main() {
     vector<int> v1 = {0,0,1,1,1,2,2,3,3,4};
     int testcase1 = 5;
     assert(solution.removeDuplicates(v1) == testcase1);
-     vector<int> v2 = {1,1,2};
+    vector<int> v2 = {1,1,2};
     int testcase2 = 2;
     assert(solution.removeDuplicates(v2) == testcase2);
     cout << "solution has passed all of the defined testcases";
