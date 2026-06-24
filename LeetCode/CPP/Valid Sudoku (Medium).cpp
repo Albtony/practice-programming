@@ -89,6 +89,30 @@ public:
 
         return true;
     }
+
+    bool isValidSudokuPlus(vector<vector<char>>& board) {
+        int row[9] = {};
+        int col[9] = {};
+        int box[9] = {};
+
+        for(int i = 0; i < 9; i++) {
+            for(int j = 0; j < 9; j++) {
+                if (board[i][j] == '.')
+                    continue;
+                int digit = board[i][j] - '0';
+                int mask = 1 << digit;
+                int k = (i / 3) * 3 + (j / 3);
+
+                if ((row[i] & mask) || (col[j] & mask) || (box[k] & mask))
+                    return false;
+                row[i] |= mask;
+                col[j] |= mask;
+                box[k] |= mask;
+            }
+        }
+
+        return true;
+    }
 };
 
 /*
